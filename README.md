@@ -1,7 +1,8 @@
-# Sistem Penjualan Tiket Event Berbasis Web
+# Sistem Penjualan Tiket Event 
 
-Sistem Penjualan Tiket Event Berbasis Web merupakan aplikasi berbasis **PHP dan MySQL** yang dirancang untuk memudahkan proses pengelolaan event serta pembelian tiket secara online.  
-Aplikasi ini dibuat sebagai **Tugas Ujian Akhir Semester (UAS)** dengan menerapkan konsep **OOP, CRUD, dan sistem login multi-role**.
+Aplikasi Sistem Penjualan Tiket Event merupakan sebuah aplikasi berbasis web yang dikembangkan untuk memudahkan proses pengelolaan dan penjualan tiket event secara terkomputerisasi. Aplikasi ini dibuat sebagai Project UAS Praktikum dengan tujuan menerapkan konsep pemrograman Object Oriented Programming (OOP), arsitektur Model–View–Controller (MVC), serta mekanisme Routing Application menggunakan file ```.htaccess```.
+
+Melalui aplikasi ini, proses yang sebelumnya dilakukan secara manual seperti pencatatan event, penjualan tiket, dan rekap transaksi dapat dilakukan secara lebih efisien, terstruktur, dan aman. Sistem ini juga dilengkapi dengan fitur autentikasi pengguna yang membedakan hak akses antara admin dan user, sehingga pengelolaan data menjadi lebih terkontrol.
 
 
 ## Identitas Mahasiswa
@@ -14,154 +15,159 @@ Kelas: TI.24.A4
 
 Matakuliah: Pemograman Web 1
 
+## 👨‍🎓 Informasi Umum
+
+Jenis Project : Project UAS Praktikum
+
+Bahasa Pemrograman : PHP Native (OOP)
+
+Database : MySQL / MariaDB
+
+Web Server : Apache (XAMPP)
+
+Konsep : MVC + Routing (.htaccess)
+
+Tampilan : CSS (custom, tema pink)
+
+
 ## Tautan Links
 
 - Penjelasan Video (YouTube):
 
-## Teknologi yang Digunakan
-
-- PHP 7
-
-- MySQL
-
-- Bootstrap 5 (Framework CSS)
-
-- HTML & CSS
-
-- Apache (XAMPP)
-
 
 ## Struktur Folder
 ```
-PENJUALAN_TIKET/
+penjualan_tiket/
 │
-├── index.php
+├── app/
+│ ├── controllers/
+│ │ ├── AuthController.php
+│ │ ├── DashboardController.php
+│ │ ├── EventController.php
+│ │ └── TransaksiController.php
+│ │
+│ ├── core/
+│ │ ├── Controller.php
+│ │ ├── Router.php
+│ │ └── Database.php
+│ │
+│ ├── models/
+│ │ ├── User.php
+│ │ ├── Event.php
+│ │ └── Transaksi.php
+│ │
+│ └── views/
+│ ├── auth/
+│ ├── admin/
+│ ├── user/
+│ └── layout/
 │
-├── admin/
-│   ├── event.php          # Menampilkan & kelola data event
-│   ├── tambah_event.php  # Form tambah event
-│   └── hapus_event.php   # Hapus data event
+├── public/
+│ ├── css/
+│ ├── js/
+│ └── index.php
 │
-├── user/
-│   ├── event.php         # Daftar event untuk user
-│   ├── beli.php          # Proses pembelian tiket
-│   ├── transaksi.php    # Riwayat transaksi user
-│   └── struk.php         # Struk pembelian tiket
-│
-├── auth/
-│   ├── login.php         # Halaman login
-│   ├── proses_login.php # Proses autentikasi
-│   └── logout.php        # Logout & hapus session
-│
-├── config/
-│   └── koneksi.php       # Koneksi database MySQL
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css     # Style tampilan aplikasi
-│   │
-│   └── img/
-│       ├── login.png     # Logo login
-│       ├── budaya.jpg    # Event budaya
-│       ├── konser.jpg    # Event konser
-│       └── seminar.jpg   # Event seminar
+├── .htaccess
+└── README.md 
 ```
+
+## ⚙️ Cara Menjalankan Aplikasi
+
+1. Install XAMPP
+
+2. Jalankan Apache dan MySQL
+
+3. Pindahkan folder ```penjualan_tiket``` ke:
+     ```c:/xampp/htdocs/```
+
+4. Import database ke phpMyAdmin
+
+5. Buka browser dan akses:
+    ```http://localhost/penjualan_tiket/auth/login```
 
 ## Fitur Aplikasi
 
-🔐 A. Sistem Login & Logout
+🔐 Autentikasi
 
-Fitur login digunakan untuk membatasi akses ke dalam sistem berdasarkan peran pengguna.
+- Login User
 
-Fungsi utama:
+- Register User
 
-- Autentikasi username dan password
+- Logout
 
-- Pembagian role admin dan user
-
-- Pengamanan halaman menggunakan session
-
-- Logout untuk mengakhiri sesi pengguna
+- Session management
 
 
-👨‍💼 B. Manajemen Event (Admin)
+👥 Role User
 
-Admin memiliki akses penuh untuk mengelola data event yang tersedia.
+- Admin
 
-Fitur admin:
+- Kelola data event (CRUD)
 
-- Menampilkan daftar event
+- Melihat data transaksi
 
-- Menambahkan event baru
+- Pencarian & pagination transaksi
 
-- Menghapus event
+- User
 
-- Menampilkan gambar event
+- Melihat daftar event
 
-- Mengelola stok tiket
+- Melakukan pembelian tiket
   
 
-👤 C. Daftar Event (User)
+🎫 Event
 
-User dapat melihat seluruh event yang tersedia lengkap dengan informasi dan gambar.
+- Tambah event
 
-Fitur user:
+- Edit event
 
-- Menampilkan daftar event
+- Hapus event
 
-- Melihat detail event
-
-- Melihat harga dan stok tiket
+- Lihat daftar event
 
 
-🎟️ D. Pembelian Tiket
+💰 Transaksi
 
-User dapat melakukan pembelian tiket untuk event tertentu.
+- Simpan transaksi pembelian tiket
 
-Fungsi utama:
-
-- Input jumlah tiket
-
-- Perhitungan total harga
-
-- Penyimpanan data pembelian
-
-- Pengurangan stok tiket otomatis
-
-
-📄 E. Riwayat Transaksi & Struk
-
-User dapat melihat riwayat pembelian dan mencetak struk tiket.
-
-Fungsi utama:
-
-- Menampilkan data transaksi user
-
-- Menampilkan detail pembelian
-
-- Menyediakan struk pembelian
-
-
-- Tampilan data dinamis
+- Tampilkan data transaksi
 
 
 ## Akun Login
 
 ### Admin
 
-- Username: ```admin```
+- Email: ```admin@gmail.com```
 
-- Password: ```admin```
+- Password: ```password```
 
 ## Proses Pembuatan Aplikasi
 
 ### Pembuatan Database 
 
-<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/390dd536-218e-43e5-9e71-843efdf5e9ff" />
+<img width="1919" height="787" alt="image" src="https://github.com/user-attachments/assets/f5d8d3dd-536e-4e0d-ae86-cda190fec508" />
+
 
 ### Struktur Folder VSC
 
+<img width="258" height="420" alt="image" src="https://github.com/user-attachments/assets/afee83aa-95cf-4e76-bf4e-60bd6a914ad1" />
+
 ### Routing (.htaccess)
+
+```
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+```
+
+Baris ini mengaktifkan mod_rewrite di Apache untuk membuat URL lebih rapi (friendly URL).
+
+- RewriteCond %{REQUEST_FILENAME} !-f → melewati jika URL mengarah ke file yang ada.
+
+- RewriteCond %{REQUEST_FILENAME} !-d → melewati jika URL mengarah ke folder yang ada.
+
+- RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L] → semua permintaan lain diarahkan ke public/index.php dengan parameter url, sehingga aplikasi bisa memproses routing melalui satu titik masuk.
 
 ### Halaman Login
 
@@ -169,7 +175,9 @@ Fungsi utama:
 
 ### CRUD Kategori
 
-###
+## Kesimpulan 
+
+Berdasarkan hasil perancangan dan implementasi Sistem Penjualan Tiket Berbasis Web, dapat disimpulkan bahwa sistem ini berhasil dibangun dengan menerapkan arsitektur Model–View–Controller (MVC) yang memisahkan antara logika aplikasi, pengolahan data, dan tampilan antarmuka pengguna. Penerapan pola MVC membuat struktur program lebih terorganisir, mudah dipahami, serta memudahkan proses pengembangan dan pemeliharaan sistem di masa mendatang.
 
 
 
