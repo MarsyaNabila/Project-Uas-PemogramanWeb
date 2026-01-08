@@ -71,7 +71,7 @@ penjualan_tiket/
 └── README.md 
 ```
 
-## ⚙️ Cara Menjalankan Aplikasi
+## Cara Menjalankan Aplikasi
 
 1. Install XAMPP
 
