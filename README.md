@@ -18,6 +18,18 @@ Matakuliah: Pemograman Web 1
 
 - Penjelasan Video (YouTube):
 
+## Teknologi yang Digunakan
+
+- PHP 7
+
+- MySQL
+
+- Bootstrap 5 (Framework CSS)
+
+- HTML & CSS
+
+- Apache (XAMPP)
+
 
 ## Struktur Folder
 ```
@@ -71,16 +83,6 @@ Fungsi utama:
 
 - Logout untuk mengakhiri sesi pengguna
 
-Teknik yang digunakan:
-
-- PHP Session
-
-- Validasi data login
-
-- Redirect halaman berdasarkan role
-
-- Session destroy saat logout
-
 
 👨‍💼 B. Manajemen Event (Admin)
 
@@ -97,19 +99,7 @@ Fitur admin:
 - Menampilkan gambar event
 
 - Mengelola stok tiket
-
-Teknik yang digunakan:
-
-- CRUD (Create, Read, Delete)
-
-- Query SQL (INSERT, SELECT, DELETE)
-
-- Form handling dengan metode POST
-
-- Upload dan pemanggilan gambar
-
-- Pemisahan halaman admin dan user
-
+  
 
 👤 C. Daftar Event (User)
 
@@ -122,16 +112,6 @@ Fitur user:
 - Melihat detail event
 
 - Melihat harga dan stok tiket
-
-Teknik yang digunakan:
-
-- Query SELECT dari database
-
-- Looping data (while / foreach)
-
-- Pemanggilan gambar dari folder assets
-
-- Tampilan berbasis card
 
 
 🎟️ D. Pembelian Tiket
@@ -148,15 +128,6 @@ Fungsi utama:
 
 - Pengurangan stok tiket otomatis
 
-Teknik yang digunakan:
-
-- Validasi input user
-
-- Query INSERT dan UPDATE
-
-- Perhitungan matematika di PHP
-
-- Transaksi sederhana database
 
 📄 E. Riwayat Transaksi & Struk
 
@@ -170,12 +141,35 @@ Fungsi utama:
 
 - Menyediakan struk pembelian
 
-Teknik yang digunakan:
-
-- Relasi antar tabel database
-
-- Join tabel
-
-- Session user ID
 
 - Tampilan data dinamis
+
+
+## Akun Login
+
+### Admin
+
+- Username: ```admin```
+
+- Password: ```admin```
+
+## Proses Pembuatan Aplikasi
+
+### Pembuatan Database 
+
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/390dd536-218e-43e5-9e71-843efdf5e9ff" />
+
+### Struktur Folder VSC
+
+### Routing (.htaccess)
+
+### Halaman Login
+
+### Dashboard Admin
+
+### CRUD Kategori
+
+###
+
+
+
