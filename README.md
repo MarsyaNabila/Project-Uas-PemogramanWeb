@@ -79,19 +79,6 @@ Tampilan : CSS (custom, tema pink)
 └── README.md
 ```
 
-## Cara Menjalankan Aplikasi
-
-1. Install XAMPP
-
-2. Jalankan Apache dan MySQL
-
-3. Pindahkan folder ```penjualan_tiket``` ke:
-     ```c:/xampp/htdocs/```
-
-4. Import database ke phpMyAdmin
-
-5. Buka browser dan akses:
-    ```http://localhost/penjualan_tiket/auth/login```
 
 ## Fitur Utama
 
