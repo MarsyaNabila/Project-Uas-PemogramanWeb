@@ -1,8 +1,10 @@
-# Sistem Penjualan Tiket Event 
+# Sistem Penjualan Makanan
 
-Aplikasi Sistem Penjualan Tiket Event merupakan sebuah aplikasi berbasis web yang dikembangkan untuk memudahkan proses pengelolaan dan penjualan tiket event secara terkomputerisasi. Aplikasi ini dibuat sebagai Project UAS Praktikum dengan tujuan menerapkan konsep pemrograman Object Oriented Programming (OOP), arsitektur Model–View–Controller (MVC), serta mekanisme Routing Application menggunakan file ```.htaccess```.
+FoodApp adalah aplikasi Sistem Penjualan Makanan berbasis Web yang dibuat menggunakan PHP Native dengan konsep MVC.
+Aplikasi ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) Pemrograman Web dengan tujuan menerapkan konsep pemrograman Object Oriented Programming (OOP), arsitektur Model–View–Controller (MVC), serta mekanisme Routing Application menggunakan file ```.htaccess```.
 
-Melalui aplikasi ini, proses yang sebelumnya dilakukan secara manual seperti pencatatan event, penjualan tiket, dan rekap transaksi dapat dilakukan secara lebih efisien, terstruktur, dan aman. Sistem ini juga dilengkapi dengan fitur autentikasi pengguna yang membedakan hak akses antara admin dan user, sehingga pengelolaan data menjadi lebih terkontrol.
+FoodApp memiliki dua peran pengguna, yaitu Admin dan User.
+Admin dapat mengelola data produk dan melihat transaksi, sedangkan User dapat membeli makanan dan melakukan transaksi secara otomatis.
 
 
 ## Identitas Mahasiswa
@@ -30,45 +32,51 @@ Konsep : MVC + Routing (.htaccess)
 Tampilan : CSS (custom, tema pink)
 
 
-## Tautan Links
-
-- Penjelasan Video (YouTube):
-
 
 ## Struktur Folder
 ```
-penjualan_tiket/
 │
 ├── app/
 │ ├── controllers/
 │ │ ├── AuthController.php
 │ │ ├── DashboardController.php
-│ │ ├── EventController.php
-│ │ └── TransaksiController.php
-│ │
-│ ├── core/
-│ │ ├── Controller.php
-│ │ ├── Router.php
-│ │ └── Database.php
+│ │ ├── ProdukController.php
+│ │ ├── TransaksiController.php
+│ │ └── UserController.php
 │ │
 │ ├── models/
 │ │ ├── User.php
-│ │ ├── Event.php
+│ │ ├── Produk.php
 │ │ └── Transaksi.php
 │ │
-│ └── views/
-│ ├── auth/
-│ ├── admin/
-│ ├── user/
-│ └── layout/
+│ ├── views/
+│ │ ├── layout/
+│ │ │ ├── header.php
+│ │ │ └── footer.php
+│ │ ├── dashboard/
+│ │ │ └── index.php
+│ │ ├── produk/
+│ │ ├── transaksi/
+│ │ └── user/
+│ │ └── dashboard.php
+│
+├── core/
+│ ├── Controller.php
+│ ├── Database.php
+│ └── Auth.php
 │
 ├── public/
 │ ├── css/
-│ ├── js/
+│ │ └── style.css
+│ ├── images/
+│ │ └── produk/
+│ │ ├── ayam.jpg
+│ │ ├── burger.jpg
+│ │ └── pizza.jpg
 │ └── index.php
+│ └── .htaccess
 │
-├── .htaccess
-└── README.md 
+└── README.md
 ```
 
 ## Cara Menjalankan Aplikasi
@@ -85,99 +93,128 @@ penjualan_tiket/
 5. Buka browser dan akses:
     ```http://localhost/penjualan_tiket/auth/login```
 
-## Fitur Aplikasi
+## Fitur Utama
 
-🔐 Autentikasi
+- Login & Logout (Admin & User)
+  
+- Multi Role (Admin / User)
+  
+- Dashboard berbeda sesuai role
+  
+- CRUD Produk
+  
+- Upload & tampil gambar produk
+  
+- Search produk
+  
+- Pagination produk
+  
+- Transaksi penjualan
+  
+- Stok otomatis berkurang
+  
+- Tampilan UI sederhana & menarik (Pink Theme)
+  
+- Struktur MVC (Model View Controller)
 
-- Login User
+## Role Pengguna
 
-- Register User
-
+Admin bertugas mengelola sistem, meliputi:
+- Login Admin
+  
+- Dashboard Admin
+  
+- Kelola data produk (CRUD)
+  
+- Melihat data transaksi
+  
 - Logout
 
-- Session management
-
-
-👥 Role User
-
-- Admin
-
-- Kelola data event (CRUD)
-
-- Melihat data transaksi
-
-- Pencarian & pagination transaksi
-
-- User
-
-- Melihat daftar event
-
-- Melakukan pembelian tiket
+User bertugas melakukan pembelian, meliputi:
+- Login User
   
-
-🎫 Event
-
-- Tambah event
-
-- Edit event
-
-- Hapus event
-
-- Lihat daftar event
-
-
-💰 Transaksi
-
-- Simpan transaksi pembelian tiket
-
-- Tampilkan data transaksi
-
+- Dashboard User
+  
+- Melihat daftar produk
+  
+- Membeli makanan
+  
+- Transaksi otomatis
+  
+- Logout
 
 ## Akun Login
 
 ### Admin
 
-- Email: ```admin@gmail.com```
+- Username : admin
 
-- Password: ```password```
+- Password : admin123
+
+### User
+
+- Username : user
+
+- Password : user123
+
+
 
 ## Proses Pembuatan Aplikasi
 
 ### Pembuatan Database 
 
-<img width="1919" height="787" alt="image" src="https://github.com/user-attachments/assets/f5d8d3dd-536e-4e0d-ae86-cda190fec508" />
+<img width="1917" height="1075" alt="image" src="https://github.com/user-attachments/assets/781e271b-3131-4f58-89cd-2d7e3aba99dd" />
 
 
 ### Struktur Folder VSC
 
-<img width="258" height="420" alt="image" src="https://github.com/user-attachments/assets/afee83aa-95cf-4e76-bf4e-60bd6a914ad1" />
+<img width="329" height="990" alt="image" src="https://github.com/user-attachments/assets/97a314f3-7b68-4985-b42f-c28a0489f8c9" />
+
 
 ### Routing (.htaccess)
 
 ```
 RewriteEngine On
+RewriteBase /makanan_penjualan/
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ public/index.php?url=$1 [L]
 ```
 
-Baris ini mengaktifkan mod_rewrite di Apache untuk membuat URL lebih rapi (friendly URL).
+Kode `.htaccess` tersebut digunakan untuk mengaktifkan fitur URL rewriting pada Apache agar aplikasi dapat menggunakan sistem routing MVC. Semua request yang masuk akan diarahkan ke file `public/index.php`, selama URL yang diakses bukan file atau folder yang benar-benar ada. Dengan cara ini, URL menjadi lebih rapi tanpa ekstensi `.php`, dan seluruh proses pengaturan controller serta method dapat dikendalikan dari satu file utama.
 
-- RewriteCond %{REQUEST_FILENAME} !-f → melewati jika URL mengarah ke file yang ada.
-
-- RewriteCond %{REQUEST_FILENAME} !-d → melewati jika URL mengarah ke folder yang ada.
-
-- RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L] → semua permintaan lain diarahkan ke public/index.php dengan parameter url, sehingga aplikasi bisa memproses routing melalui satu titik masuk.
 
 ### Halaman Login
 
+<img width="940" height="1079" alt="image" src="https://github.com/user-attachments/assets/e2d6e397-d106-4419-adbb-93a2b425f6eb" />
+
+
+
 ### Dashboard Admin
 
-### CRUD Kategori
+<img width="950" height="1079" alt="image" src="https://github.com/user-attachments/assets/1d5d4501-de5e-461d-bf8d-bef9981f3bc1" />
+
+
+### Halaman Produk
+
+<img width="948" height="1079" alt="image" src="https://github.com/user-attachments/assets/07f5e83f-5c4f-4d25-b6da-45f7627a08eb" />
+
+## Halaman Tambah Makanan
+
+<img width="940" height="1077" alt="image" src="https://github.com/user-attachments/assets/fe900578-1b90-473e-8d17-f93a8e8efbc9" />
+
+
+## Halaman Transaksi
+
+<img width="941" height="1079" alt="image" src="https://github.com/user-attachments/assets/4a31824b-83e2-4104-b189-111a16099c54" />
+
+
+
 
 ## Kesimpulan 
+Sistem Penjualan Makanan berbasis web ini membantu proses pengelolaan produk dan transaksi menjadi lebih terstruktur dan efisien. Dengan adanya pembagian peran antara Admin dan User, sistem mampu mengelola data produk, transaksi, serta stok secara otomatis. Penerapan konsep MVC membuat aplikasi lebih rapi, mudah dipahami, dan mudah dikembangkan, sehingga sistem ini layak digunakan sebagai solusi sederhana penjualan makanan secara online.
 
-Berdasarkan hasil perancangan dan implementasi Sistem Penjualan Tiket Berbasis Web, dapat disimpulkan bahwa sistem ini berhasil dibangun dengan menerapkan arsitektur Model–View–Controller (MVC) yang memisahkan antara logika aplikasi, pengolahan data, dan tampilan antarmuka pengguna. Penerapan pola MVC membuat struktur program lebih terorganisir, mudah dipahami, serta memudahkan proses pengembangan dan pemeliharaan sistem di masa mendatang.
 
 
 
