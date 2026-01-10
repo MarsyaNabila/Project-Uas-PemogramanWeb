@@ -417,6 +417,38 @@ Kode ini mengatur halaman transaksi.
 Method index() mengecek login, mengambil semua data transaksi dari database, lalu menampilkannya ke halaman daftar transaksi.
 Method create() digunakan untuk menambah transaksi baru, di mana data disimpan menggunakan ID user yang sedang login, lalu diarahkan kembali ke halaman transaksi.
 
+## Halaman Hapus (```ProdukController.php```)
+
+
+<img width="926" height="1079" alt="image" src="https://github.com/user-attachments/assets/4eff5d12-7ac9-446d-be39-9d2ecb710c57" />
+
+
+## User 
+
+- Username : user
+
+- Password : user123
+
+## Halaman Login/Logout User
+
+<img width="941" height="1079" alt="Screenshot 2026-01-11 020240" src="https://github.com/user-attachments/assets/096ff2d4-0b74-4a9f-97df-72111639ff52" />
+
+Fitur Login User digunakan untuk mengamankan akses ke halaman pengguna dan memastikan hanya user yang terdaftar yang dapat melakukan transaksi.
+
+
+## Halaman Dashboard User
+
+<img width="947" height="1079" alt="Screenshot 2026-01-11 020247" src="https://github.com/user-attachments/assets/8c9ce733-0d46-4a88-abd3-2ee793ae439d" />
+
+Halaman Dashboard User merupakan halaman utama yang ditampilkan setelah user berhasil login. Halaman ini berfungsi sebagai pusat navigasi bagi user untuk melakukan aktivitas pembelian makanan.
+
+
+## Halaman Daftar Menu User
+
+<img width="947" height="1079" alt="Screenshot 2026-01-11 020255" src="https://github.com/user-attachments/assets/6c3175b3-6be5-455c-8952-4f81114b5f0c" />
+
+Halaman Daftar Menu merupakan halaman utama bagi user untuk melihat seluruh makanan yang tersedia dalam sistem penjualan makanan. Halaman ini hanya dapat diakses setelah user berhasil melakukan login.
+
 ## Kesimpulan 
 Sistem Penjualan Makanan berbasis web ini membantu proses pengelolaan produk dan transaksi menjadi lebih terstruktur dan efisien. Dengan adanya pembagian peran antara Admin dan User, sistem mampu mengelola data produk, transaksi, serta stok secara otomatis. Penerapan konsep MVC membuat aplikasi lebih rapi, mudah dipahami, dan mudah dikembangkan, sehingga sistem ini layak digunakan sebagai solusi sederhana penjualan makanan secara online.
 
