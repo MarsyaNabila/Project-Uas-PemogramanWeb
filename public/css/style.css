@@ -1,0 +1,267 @@
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+    margin: 0;
+    color: #5a1a2e;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* ===== JUDUL ===== */
+.page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d63384;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn-add {
+    background: #ff5fa2;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #e6498c;
+}
+
+.btn-delete {
+    background: #ff4d4d;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #d93636;
+}
+
+/* ===== TABLE ===== */
+.table-wrapper {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #ffb6d5;
+    color: #5a1a2e;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #f3c6d9;
+}
+
+tr:hover {
+    background: #fff0f6;
+}
+
+/* ===== GAMBAR ===== */
+.img-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background: #ffe6f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* ===== EMPTY DATA ===== */
+.empty {
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    color: #999;
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+.login-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #d63384;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #f3c6d9;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: #ff5fa2;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background: #ff5fa2;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #e6498c;
+}
+
+.login-error {
+    background: #ffe0e0;
+    color: #b30000;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-wrapper {
+    padding: 40px 0;
+}
+
+.dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8b1c42;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,.12);
+    transition: transform .2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h3 {
+    margin: 10px 0;
+    color: #d63384;
+}
+
+.dashboard-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.dashboard-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-produk {
+    background: #ff5fa2;
+    color: white;
+}
+
+.btn-produk:hover {
+    background: #e6498c;
+}
+
+.btn-transaksi {
+    background: #6f7bff;
+    color: white;
+}
+
+.btn-transaksi:hover {
+    background: #4f5bff;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 0 5px;
+    background: #ffc0da;
+    color: #800040;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pagination a.active {
+    background: #ff5fa2;
+    color: #fff;
+}
