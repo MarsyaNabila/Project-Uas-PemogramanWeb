@@ -429,21 +429,21 @@ Method create() digunakan untuk menambah transaksi baru, di mana data disimpan m
 
 - Password : user123
 
-## Halaman Login/Logout User
+## Halaman Login/Logout User (```AuthController.php```)
 
 <img width="941" height="1079" alt="Screenshot 2026-01-11 020240" src="https://github.com/user-attachments/assets/096ff2d4-0b74-4a9f-97df-72111639ff52" />
 
 Fitur Login User digunakan untuk mengamankan akses ke halaman pengguna dan memastikan hanya user yang terdaftar yang dapat melakukan transaksi.
 
 
-## Halaman Dashboard User
+## Halaman Dashboard User (```UserController.php/user/dashboard.php```)
 
 <img width="947" height="1079" alt="Screenshot 2026-01-11 020247" src="https://github.com/user-attachments/assets/8c9ce733-0d46-4a88-abd3-2ee793ae439d" />
 
 Halaman Dashboard User merupakan halaman utama yang ditampilkan setelah user berhasil login. Halaman ini berfungsi sebagai pusat navigasi bagi user untuk melakukan aktivitas pembelian makanan.
 
 
-## Halaman Daftar Menu User
+## Halaman Daftar Menu User (```UserController.php/user/produk.php```)
 
 <img width="947" height="1079" alt="Screenshot 2026-01-11 020255" src="https://github.com/user-attachments/assets/6c3175b3-6be5-455c-8952-4f81114b5f0c" />
 
