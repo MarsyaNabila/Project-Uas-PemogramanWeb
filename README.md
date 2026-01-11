@@ -1,12 +1,3 @@
-# Sistem Penjualan Makanan
-
-FoodApp adalah aplikasi Sistem Penjualan Makanan berbasis Web yang dibuat menggunakan PHP Native dengan konsep MVC.
-Aplikasi ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) Pemrograman Web dengan tujuan menerapkan konsep pemrograman Object Oriented Programming (OOP), arsitektur Model–View–Controller (MVC), serta mekanisme Routing Application menggunakan file ```.htaccess```.
-
-FoodApp memiliki dua peran pengguna, yaitu Admin dan User.
-Admin dapat mengelola data produk dan melihat transaksi, sedangkan User dapat membeli makanan dan melakukan transaksi secara otomatis.
-
-
 ## Identitas Mahasiswa
 
 Nama: Marsya Nabila Putri
@@ -17,7 +8,17 @@ Kelas: TI.24.A4
 
 Matakuliah: Pemograman Web 1
 
-## 👨‍🎓 Informasi Umum
+
+# Sistem Penjualan Makanan
+
+FoodApp adalah aplikasi Sistem Penjualan Makanan berbasis Web yang dibuat menggunakan PHP Native dengan konsep MVC.
+Aplikasi ini dikembangkan untuk memenuhi tugas Ujian Akhir Semester (UAS) Pemrograman Web dengan tujuan menerapkan konsep pemrograman Object Oriented Programming (OOP), arsitektur Model–View–Controller (MVC), serta mekanisme Routing Application menggunakan file ```.htaccess```.
+
+FoodApp memiliki dua peran pengguna, yaitu Admin dan User.
+Admin dapat mengelola data produk dan melihat transaksi, sedangkan User dapat membeli makanan dan melakukan transaksi secara otomatis.
+
+
+## Informasi Umum
 
 Jenis Project : Project UAS Praktikum
 
